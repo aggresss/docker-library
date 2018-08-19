@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 
-MAINTAINER yujia <yujia@qiniu.com>
+MAINTAINER aggresss <aggresss@gmail.com>
+LABEL VERSION="1.0"
 
 # Pick up some build dependencies
 RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
