@@ -1,2 +1,2 @@
 # docker-library
-docker file for spective use
+docker file for selective use
