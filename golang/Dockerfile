@@ -17,6 +17,8 @@ git \
 ca-certificates \
 unzip \
 xz-utils \
+hexedit \
+tmux \
 build-essential \
 gdb \
 autoconf \
