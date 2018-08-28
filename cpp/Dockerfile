@@ -1,7 +1,10 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER yujia <aggresss@163.com>
-LABEL VERSION=1.0
+LABEL VERSION=2.0
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV TZ=Asia/Shanghai
 
 # Pick up some build dependencies
 RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
@@ -35,7 +38,3 @@ rm -rf /var/lib/apt/lists/*
 
 # VIM configuration
 RUN wget -P /root https://raw.githubusercontent.com/aggresss/dotfiles/master/vim/.vimrc
-
-# Modify timezone to GTM+8
-ENV TZ=Asia/Shanghai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
