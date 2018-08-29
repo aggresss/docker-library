@@ -27,6 +27,7 @@ gdb \
 autoconf \
 automake \
 libtool \
+ccache \
 python \
 pkg-config \
 flex \
