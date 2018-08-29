@@ -36,6 +36,3 @@ yasm \
 && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/*
-
-# VIM configuration
-RUN wget -P /root https://raw.githubusercontent.com/aggresss/dotfiles/master/vim/.vimrc
