@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER aggresss <aggresss@163.com>
 LABEL IMAGE=golang VERSION=1.10.3
@@ -34,9 +34,6 @@ yasm \
 && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/*
-
-# Modify timezone to GTM+8
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Golang configuration
 RUN curl -OL http://pdi3zh561.bkt.clouddn.com/go/go1.10.3.linux-amd64.tar.gz && \
