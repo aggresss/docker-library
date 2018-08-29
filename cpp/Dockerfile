@@ -33,6 +33,9 @@ pkg-config \
 flex \
 bison \
 yasm \
+libbz2-dev \
+zlib1g-dev \
+liblzma-dev \
 && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/*
