@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:xenial
 
 MAINTAINER aggresss <aggresss@163.com>
 LABEL IMAGE=aggresss/elementary
