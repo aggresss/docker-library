@@ -44,6 +44,4 @@ apt-get clean && \
 rm -rf /var/lib/apt/lists/*
 
 RUN locale-gen en_US.UTF-8 && \ 
-    echo "LANG=\"en_US.UTF-8\"" > /etc/default/locale && \
-    echo "LANGUAGE=\"en_US:en\"" >> /etc/default/locale && \
-    echo "LC_ALL=\"en_US.UTF-8\"" >> /etc/default/locale
+    update-locale LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
