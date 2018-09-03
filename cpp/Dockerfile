@@ -1,7 +1,8 @@
 FROM ubuntu:18.04
 
-MAINTAINER yujia <aggresss@163.com>
-LABEL VERSION=2.0
+MAINTAINER aggresss <aggresss@163.com>
+LABEL IMAGE=aggresss/elementary
+LABEL VERSION=1.0
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=Asia/Shanghai
