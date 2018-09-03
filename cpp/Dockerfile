@@ -34,6 +34,9 @@ flex \
 bison \
 yasm \
 gawk \
+net-tools \
+iputils-ping \
+netcat \
 && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/*
