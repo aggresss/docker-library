@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 MAINTAINER aggresss <aggresss@163.com>
 LABEL IMAGE=aggresss/elementary
-LABEL VERSION=1.0
+LABEL VERSION=18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=Asia/Shanghai
