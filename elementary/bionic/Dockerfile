@@ -1,8 +1,8 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 MAINTAINER aggresss <aggresss@163.com>
 LABEL IMAGE=aggresss/elementary
-LABEL VERSION=xenial
+LABEL VERSION=bionic
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=Asia/Shanghai
