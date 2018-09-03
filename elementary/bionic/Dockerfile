@@ -13,7 +13,7 @@ apt-get update && apt-get install -y --no-install-recommends \
 sudo \
 man \
 tzdata \
-locale \
+locales \
 curl \
 wget \
 vim \
