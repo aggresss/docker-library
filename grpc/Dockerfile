@@ -1,7 +1,7 @@
 from aggresss/elementary:bionic
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=rpc VERSION=1.14.1
+LABEL IMAGE=grpc VERSION=1.14.1
 
 # fork from https://github.com/grpc/grpc-docker-library/blob/master/1.12.0/cxx/Dockerfile
 
