@@ -1,8 +1,7 @@
 FROM ubuntu:xenial
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=aggresss/elementary
-LABEL VERSION=xenial
+LABEL IMAGE=aggresss/elementary VERSION=xenial
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=Asia/Shanghai
