@@ -33,7 +33,7 @@ rm -rf /var/lib/apt/lists/*
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN git clone --depth=1 https://github.com/ossrs/srs.git && \
+RUN git clone --depth=1 -b v2.0-r4 https://github.com/ossrs/srs.git && \
 cd srs/trunk && \
 ./configure && \
 make
