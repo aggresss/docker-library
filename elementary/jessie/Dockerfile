@@ -1,7 +1,7 @@
 FROM debian:jessie
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=aggresss/elementary VERSION=stretch
+LABEL IMAGE=aggresss/elementary VERSION=jessie
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=Asia/Shanghai
