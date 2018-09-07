@@ -1,4 +1,4 @@
-FROM aggresss/elementary:bionic
+FROM aggresss/elementary:xenial
 
 MAINTAINER yujia <aggresss@163.com>
 LABEL IMAGE=srs VERSION=v2.0-r4
