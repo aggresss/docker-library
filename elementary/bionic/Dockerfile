@@ -5,6 +5,7 @@ LABEL IMAGE=aggresss/elementary VERSION=bionic
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=Asia/Shanghai
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 # Pick up some build dependencies
 RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
@@ -41,6 +42,3 @@ netcat \
 && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/*
-
-RUN locale-gen en_US.UTF-8 && \ 
-    update-locale LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
