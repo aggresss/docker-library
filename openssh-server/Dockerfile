@@ -1,20 +1,14 @@
-FROM ubuntu:16.04
+FROM aggresss/elementary:bionic
 
 MAINTAINER aggresss <aggresss@gmail.com>
-LABEL VERSION="1.0"
+LABEL IMAGE="openssh-server" VERSION="bionic"
 
 # Pick up some build dependencies
-RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
-    apt-get update && apt-get install -y --no-install-recommends \
-        tzdata \
+RUN apt-get update && apt-get install -y --no-install-recommends \
         openssh-server \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
-# Modify timezone to GTM+8
-ENV TZ=Asia/Shanghai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Setup sshd service
 RUN mkdir /var/run/sshd
