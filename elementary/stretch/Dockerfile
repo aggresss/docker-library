@@ -1,4 +1,4 @@
-# Dockerfile for stretch and auto generate by 
+# Dockerfile for stretch and auto generate by
 # https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
 FROM debian:stretch
 

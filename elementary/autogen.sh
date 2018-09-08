@@ -3,41 +3,31 @@
 
 DIST_DIR=.
 DOCKERFILE=Dockerfile
-readonly UBUNTU="xenial bionic"
-readonly DEBIAN="jessie stretch"
-readonly DISTRIBUTION="${DEBIAN} ${UBUNTU}"
+###############################################################################
+#           distribution    codename    mirror
+##############################################################################
+declare -a DISTRIBUTIONS=( \
+                "ubuntu      xenial      s/archive.ubuntu/mirrors.aliyun/g" \
+                "ubuntu      bionic      s/archive.ubuntu/mirrors.aliyun/g" \
+                "debian      jessie      s/deb.debian.org/mirrors.aliyun.com/g" \
+                "debian      stretch     s/deb.debian.org/mirrors.aliyun.com/g" \
+                )
 
 ################################################################################
-for CODENAME in ${DISTRIBUTION}
+for D in "${DISTRIBUTIONS[@]}"
 do
-mkdir -p ${DIST_DIR}/${CODENAME}
-cat << END > ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
-# Dockerfile for ${CODENAME} and auto generate by 
+    declare -a ARRAY=(${D})
+    DISTRIBUTION=${ARRAY[0]}
+    CODENAME=${ARRAY[1]}
+    MIRROR=${ARRAY[2]}
+
+    echo ${DISTRIBUTION} # ${CODENAME} ${MIRROR}
+    mkdir -p ${DIST_DIR}/${CODENAME}
+    cat << END > ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
+# Dockerfile for ${CODENAME} and auto generate by
 # https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
-END
-done
+FROM ${DISTRIBUTION}:${CODENAME}
 
-################################################################################
-for CODENAME in ${UBUNTU}
-do
-cat << END >> ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
-FROM ubuntu:${CODENAME}
-
-END
-done
-
-for CODENAME in ${DEBIAN}
-do
-cat << END >> ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
-FROM debian:${CODENAME}
-
-END
-done
-
-################################################################################
-for CODENAME in ${DISTRIBUTION}
-do
-cat << END >> ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
 MAINTAINER aggresss <aggresss@163.com>
 LABEL IMAGE=aggresss/elementary VERSION=${CODENAME}
 
@@ -46,28 +36,7 @@ ENV TZ=Asia/Shanghai
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 # Pick up some build dependencies
-END
-done
-
-################################################################################
-for CODENAME in ${UBUNTU}
-do
-cat << END >> ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
-RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \\
-END
-done
-
-for CODENAME in ${DEBIAN}
-do
-cat << END >> ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
-RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \\
-END
-done
-
-################################################################################
-for CODENAME in ${DISTRIBUTION}
-do
-cat << END >> ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
+RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
     apt-get update && apt-get install -y --no-install-recommends \\
         sudo \\
         man \\
