@@ -4,14 +4,14 @@
 DIST_DIR=.
 DOCKERFILE=Dockerfile
 ###############################################################################
-#           distribution    codename    mirror
-##############################################################################
+# distribution   codename    mirror
+###############################################################################
 declare -a DISTRIBUTIONS=( \
-                "ubuntu      xenial      s/archive.ubuntu/mirrors.aliyun/g" \
-                "ubuntu      bionic      s/archive.ubuntu/mirrors.aliyun/g" \
-                "debian      jessie      s/deb.debian.org/mirrors.aliyun.com/g" \
-                "debian      stretch     s/deb.debian.org/mirrors.aliyun.com/g" \
-                )
+    "ubuntu      xenial      s/archive.ubuntu/mirrors.aliyun/g" \
+    "ubuntu      bionic      s/archive.ubuntu/mirrors.aliyun/g" \
+    "debian      jessie      s/deb.debian.org/mirrors.aliyun.com/g" \
+    "debian      stretch     s/deb.debian.org/mirrors.aliyun.com/g" \
+    )
 
 ################################################################################
 for D in "${DISTRIBUTIONS[@]}"
