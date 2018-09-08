@@ -12,7 +12,8 @@ for CODENAME in ${DISTRIBUTION}
 do
 mkdir -p ${DIST_DIR}/${CODENAME}
 cat << END > ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
-# Dockerfile for ${CODENAME} and auto generate by https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
+# Dockerfile for ${CODENAME} and auto generate by 
+# https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
 END
 done
 
