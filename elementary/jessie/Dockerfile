@@ -1,4 +1,5 @@
-# Dockerfile for jessie and auto generate by https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
+# Dockerfile for jessie and auto generate by 
+# https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
 FROM debian:jessie
 
 MAINTAINER aggresss <aggresss@163.com>

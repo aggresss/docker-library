@@ -1,4 +1,5 @@
-# Dockerfile for bionic and auto generate by https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
+# Dockerfile for bionic and auto generate by 
+# https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
 FROM ubuntu:bionic
 
 MAINTAINER aggresss <aggresss@163.com>

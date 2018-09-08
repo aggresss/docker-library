@@ -1,4 +1,5 @@
-# Dockerfile for xenial and auto generate by https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
+# Dockerfile for xenial and auto generate by 
+# https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
 FROM ubuntu:xenial
 
 MAINTAINER aggresss <aggresss@163.com>
