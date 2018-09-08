@@ -20,8 +20,7 @@ do
     DISTRIBUTION=${ARRAY[0]}
     CODENAME=${ARRAY[1]}
     MIRROR=${ARRAY[2]}
-
-    echo ${DISTRIBUTION} # ${CODENAME} ${MIRROR}
+    echo ${DISTRIBUTION} "|" ${CODENAME} "|" ${MIRROR}
     mkdir -p ${DIST_DIR}/${CODENAME}
     cat << END > ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
 # Dockerfile for ${CODENAME} and auto generate by
