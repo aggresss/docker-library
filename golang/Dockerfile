@@ -1,9 +1,9 @@
 FROM aggresss/elementary:bionic
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=golang VERSION=1.10.3
+LABEL IMAGE=golang VERSION=1.10.4
 
-ENV GO_VERSION 1.10.3
+ENV GO_VERSION 1.10.4
 ENV GOPATH /go
 ENV PATH ${GOPATH}/bin:/usr/local/go/bin:${PATH}
 
