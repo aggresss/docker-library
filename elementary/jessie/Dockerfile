@@ -16,6 +16,7 @@ RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
         man \
         tzdata \
         locales \
+        tree \
         curl \
         wget \
         vim \

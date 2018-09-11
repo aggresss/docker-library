@@ -41,6 +41,7 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
         man \\
         tzdata \\
         locales \\
+        tree \\
         curl \\
         wget \\
         vim \\
