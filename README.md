@@ -1,2 +1,2 @@
 # docker-library
-docker file for selective use
+Dockerfile for selective use and view it on each branch
