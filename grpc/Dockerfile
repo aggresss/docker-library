@@ -12,7 +12,7 @@ RUN git clone -b ${GRPC_RELEASE_TAG} https://github.com/grpc/grpc /var/local/git
     git submodule update --init && \
     echo "--- installing protobuf ---" && \
     cd third_party/protobuf && \
-    ./autogen.sh && ./configure --enable-shared && \
+    ./autogen.sh && ./configure CXXFLAGS="-O2" --enable-shared && \
     make -j$(nproc) && make -j$(nproc) check && make install && make clean && ldconfig && \
     echo "--- installing grpc ---" && \
     cd /var/local/git/grpc && \
