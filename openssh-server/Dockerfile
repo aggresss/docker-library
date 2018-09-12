@@ -7,8 +7,9 @@ MAINTAINER aggresss <aggresss@gmail.com>
 LABEL IMAGE="openssh-server" VERSION="bionic"
 
 # Pick up some build dependencies and environment
-RUN apt-get update && apt-get install -y --no-install-recommends \
-openssh-server \
+RUN echo "--- pick up dependencies  ---" && \
+    apt-get update && apt-get install -y --no-install-recommends \
+        openssh-server \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
