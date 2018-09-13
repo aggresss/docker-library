@@ -9,11 +9,12 @@ RUN git clone -b ${FFMPEG_RELEASE_TAG} https://github.com/ffmpeg/ffmpeg.git /var
         echo "--- installing ffmpeg ---" && \
         cd /var/local/git/ffmpeg && \
         ./configure \
-            --disable-doc \
             --enable-gpl \
             --enable-version3 \
             --enable-nonfree \
             --enable-shared \
             --enable-static \
+            --enable-small \
+            --disable-debug \
             --enable-avresample && \
         make && make install && make clean && ldconfig
