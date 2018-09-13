@@ -5,7 +5,7 @@ from aggresss/elementary:bionic
 MAINTAINER aggresss <aggresss@163.com>
 LABEL IMAGE=glibc VERSION=2.27
 
-# install protobuf first, then grpc
+# build glic and strip static library's debug section 
 ENV GLIBC_RELEASE_TAG=2.27
 RUN cd /var/local && \
     curl -OL http://ftp.gnu.org/gnu/libc/glibc-${GLIBC_RELEASE_TAG}.tar.bz2 && \
