@@ -16,7 +16,6 @@ RUN git clone -b ${FFMPEG_RELEASE_TAG} https://github.com/ffmpeg/ffmpeg.git /var
         --enable-static \
         --enable-small \
         --enable-doc \
-        --enable-programs \
         --disable-debug \
         \
         --disable-avdevice \
