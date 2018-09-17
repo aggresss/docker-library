@@ -44,6 +44,7 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
         tree \\
         curl \\
         wget \\
+        rsync \\
         vim \\
         ssh \\
         git \\

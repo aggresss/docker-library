@@ -19,6 +19,7 @@ RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
         tree \
         curl \
         wget \
+        rsync \
         vim \
         ssh \
         git \
