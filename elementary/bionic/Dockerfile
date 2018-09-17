@@ -29,6 +29,7 @@ RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
         tmux \
         build-essential \
         gdb \
+        gdbserver \
         autoconf \
         automake \
         libtool \

@@ -54,6 +54,7 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
         tmux \\
         build-essential \\
         gdb \\
+        gdbserver \\
         autoconf \\
         automake \\
         libtool \\
