@@ -26,6 +26,7 @@ RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
         ca-certificates \
         unzip \
         xz-utils \
+        p7zip-full \
         hexedit \
         tmux \
         build-essential \
