@@ -60,6 +60,7 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
         autoconf \\
         automake \\
         libtool \\
+        cmake \\
         ccache \\
         python \\
         pkg-config \\

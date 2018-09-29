@@ -35,6 +35,7 @@ RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
         autoconf \
         automake \
         libtool \
+        cmake \
         ccache \
         python \
         pkg-config \
