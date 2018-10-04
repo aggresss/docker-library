@@ -32,7 +32,6 @@ RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
         build-essential \
         gdb \
         gdbserver \
-        autoconf \
         automake \
         libtool \
         cmake \
@@ -41,6 +40,7 @@ RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
         pkg-config \
         flex \
         bison \
+        nasm \
         yasm \
         gawk \
         net-tools \
