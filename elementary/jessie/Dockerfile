@@ -24,6 +24,8 @@ RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
         ssh \
         git \
         ca-certificates \
+        bc \
+        cpio \
         unzip \
         xz-utils \
         p7zip-full \

@@ -49,6 +49,8 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
         ssh \\
         git \\
         ca-certificates \\
+        bc \\
+        cpio \\
         unzip \\
         xz-utils \\
         p7zip-full \\
