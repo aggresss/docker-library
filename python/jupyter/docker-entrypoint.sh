@@ -51,7 +51,7 @@ file_env() {
 # potentially recursively, or override the logic used in subsequent calls)
 process_init_file() {
     local f="$1"; shift
-    local mysql=( "$@" )
+    local definedCommand=( "$@" )
 
     case "$f" in
         *.sh)     echo "$0: running $f"; . "$f" ;;
