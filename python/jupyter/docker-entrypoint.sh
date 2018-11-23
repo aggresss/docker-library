@@ -3,7 +3,8 @@
 set -eo pipefail
 shopt -s nullglob
 
-definedCommand="jupyter notebook"
+definedCommand="bash"
+JUPYTER_NOTEBOOK_PATH="/root/jupyter-notebook"
 
 # if command starts with an option, prepend defined command
 if [ "${1:0:1}" = '-' ]; then
