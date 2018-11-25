@@ -19,9 +19,9 @@ RUN apt-get update && apt-get -y install apt-utils python3 python3-dev && \
         pillow \
         jupyter \
         jupyterlab \
-        && \
-        apt-get clean && \
-        rm -rf /var/lib/apt/lists/*
+    && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY docker-entrypoint.sh /usr/local/bin/
 EXPOSE 8888
