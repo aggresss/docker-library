@@ -21,7 +21,7 @@ RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
         wget \
         rsync \
         vim \
-        ctags \
+        exuberant-ctags \
         cscope \
         ssh \
         git \
