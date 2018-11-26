@@ -46,6 +46,8 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
         wget \\
         rsync \\
         vim \\
+        ctags \\
+        cscope \\
         ssh \\
         git \\
         ca-certificates \\

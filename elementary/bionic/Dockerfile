@@ -21,6 +21,8 @@ RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
         wget \
         rsync \
         vim \
+        ctags \
+        cscope \
         ssh \
         git \
         ca-certificates \
