@@ -50,6 +50,7 @@ RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
         net-tools \
         iputils-ping \
         netcat \
+        socat \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
