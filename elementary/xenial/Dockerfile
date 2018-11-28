@@ -17,6 +17,7 @@ RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
         tzdata \
         locales \
         supervisor \
+        stow \
         tree \
         psmisc \
         curl \
@@ -53,7 +54,6 @@ RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
         iputils-ping \
         netcat \
         socat \
-        stow \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
