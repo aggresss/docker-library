@@ -16,7 +16,9 @@ RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
         man \
         tzdata \
         locales \
+        supervisor \
         tree \
+        psmisc \
         curl \
         wget \
         rsync \
@@ -51,6 +53,7 @@ RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
         iputils-ping \
         netcat \
         socat \
+        stow \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
