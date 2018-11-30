@@ -7,6 +7,7 @@ LABEL IMAGE=aggresss/x11 VERSION=bionic
 
 # configure environment for x11
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    openjdk-8-jdk \
     xorg \
     dbus-x11 \
     fonts-dejavu \
