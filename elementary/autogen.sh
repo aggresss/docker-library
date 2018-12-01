@@ -52,6 +52,7 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
         exuberant-ctags \\
         cscope \\
         ssh \\
+        mosh \\
         git \\
         ca-certificates \\
         bc \\
@@ -81,7 +82,14 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
         socat \\
         && \\
     apt-get clean && \\
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* \\
+    && \\
+    echo "docker:x:1000:1000::/home/docker:/bin/bash" >> /etc/passwd && \\
+    echo "docker:x:1000:" >> /etc/group && \\
+    echo "docker ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/docker && \\
+    chmod 0440 /etc/sudoers.d/docker && \\
+    mkdir -p /home/docker && \\
+    chown docker:docker -R /home/docker
 
 END
 done
