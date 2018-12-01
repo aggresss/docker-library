@@ -12,8 +12,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* \
     && \
-    echo "[program:xxxx]" > /etc/supervisor/conf.d/sshd.conf && \
-    echo "command=/usr/sbin/xxxx" >> /etc/supervisor/conf.d/sshd.conf
+    echo "[program:xxxx]" > /etc/supervisor/conf.d/xxxx.conf && \
+    echo "command=/usr/sbin/xxxx" >> /etc/supervisor/conf.d/xxxx.conf
 
 EXPOSE XX
 USER XX
