@@ -53,6 +53,7 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
         cscope \\
         ssh \\
         mosh \\
+        openssh-server \\
         git \\
         ca-certificates \\
         bc \\
@@ -89,7 +90,15 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
     echo "docker ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/docker && \\
     chmod 0440 /etc/sudoers.d/docker && \\
     mkdir -p /home/docker && \\
-    chown docker:docker -R /home/docker
+    chown docker:docker -R /home/docker \\
+    && \\
+    echo "#!/bin/bash" > /usr/local/bin/docker-entrypoint.sh && \\
+    echo "sudo supervisord -c /etc/supervisor/supervisord.conf" >> /usr/local/bin/docker-entrypoint.sh && \\
+    echo "exec \"\\\$@\"" >> /usr/local/bin/docker-entrypoint.sh && \\
+    chmod 755 /usr/local/bin/docker-entrypoint.sh
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["bash"]
 
 END
 done
