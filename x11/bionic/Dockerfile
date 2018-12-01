@@ -24,14 +24,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     feh \
     && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* \
-    && \
-    echo "docker:x:1000:1000::/home/docker:/bin/bash" >> /etc/passwd && \
-    echo "docker:x:1000:" >> /etc/group && \
-    echo "docker ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/docker && \
-    chmod 0440 /etc/sudoers.d/docker && \
-    mkdir -p /home/docker && \
-    chown docker:docker -R /home/docker
+    rm -rf /var/lib/apt/lists/*
 
 COPY etc/ /etc/
 COPY docker-entrypoint.sh /usr/local/bin/
