@@ -8,6 +8,7 @@ LABEL IMAGE=python VERSION=bionic
 RUN apt-get update && apt-get -y install apt-utils python3 python3-dev && \
     cd /usr/local/bin && curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py && \
     cd /usr/bin && rm -rf python && ln -s python3 python && \
+    mkdir -p /root/.pip && \
     echo "[global]" > /root/.pip/pip.conf && \
     echo "index-url = https://mirrors.aliyun.com/pypi/simple/" >> /root/.pip/pip.conf && \
     echo "[install]" >> /root/.pip/pip.conf && \
