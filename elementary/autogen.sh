@@ -7,6 +7,7 @@ DOCKERFILE=Dockerfile
 # distribution   codename    mirror
 ###############################################################################
 declare -a DISTRIBUTIONS=( \
+    "ubuntu      trusty      s/archive.ubuntu/mirrors.aliyun/g" \
     "ubuntu      xenial      s/archive.ubuntu/mirrors.aliyun/g" \
     "ubuntu      bionic      s/archive.ubuntu/mirrors.aliyun/g" \
     "debian      jessie      s/deb.debian.org/mirrors.aliyun.com/g" \
