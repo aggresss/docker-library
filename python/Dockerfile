@@ -3,7 +3,8 @@
 FROM aggresss/elementary:bionic
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=python VERSION=bionic
+LABEL DOCKER_IMAGE=aggresss/python
+ENV DOCKER_IMAGE=aggresss/python
 
 WORKDIR /root/jupyter-notebook
 
