@@ -1,4 +1,4 @@
-from aggresss/elementary:bionic
+from aggresss/elementary:trusty
 
 MAINTAINER aggresss <aggresss@163.com>
 LABEL IMAGE=grpc VERSION=1.14.1
