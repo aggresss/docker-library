@@ -3,7 +3,8 @@
 FROM aggresss/elementary:bionic
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=aggresss/x11 VERSION=bionic
+LABEL DOCKER_IMAGE=aggresss/x11
+ENV DOCKER_IMAGE=aggresss/x11
 
 # configure environment for x11
 RUN apt-get update && apt-get install -y --no-install-recommends \
