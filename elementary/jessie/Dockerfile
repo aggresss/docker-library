@@ -3,8 +3,8 @@
 FROM debian:jessie
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=aggresss/elementary VERSION=jessie
-
+LABEL DOCKER_IMAGE=aggresss/elementary:jessie
+ENV DOCKER_IMAGE=aggresss/elementary:jessie
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Shanghai
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8

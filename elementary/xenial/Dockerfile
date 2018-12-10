@@ -3,8 +3,8 @@
 FROM ubuntu:xenial
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=aggresss/elementary VERSION=xenial
-
+LABEL DOCKER_IMAGE=aggresss/elementary:xenial
+ENV DOCKER_IMAGE=aggresss/elementary:xenial
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Shanghai
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8

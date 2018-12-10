@@ -3,8 +3,8 @@
 FROM ubuntu:trusty
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=aggresss/elementary VERSION=trusty
-
+LABEL DOCKER_IMAGE=aggresss/elementary:trusty
+ENV DOCKER_IMAGE=aggresss/elementary:trusty
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Shanghai
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
