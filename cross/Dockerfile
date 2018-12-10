@@ -3,7 +3,7 @@
 FROM aggresss/elementary:bionic
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=aggresss/cross
+LABEL DOCKER_IMAGE=aggresss/cross
 ENV DOCKER_IMAGE=aggresss/cross
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
