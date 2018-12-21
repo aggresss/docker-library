@@ -3,7 +3,8 @@
 FROM aggresss/elementary:bionic
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=aggresss/mosquitto
+LABEL DOCKER_IMAGE=aggresss/mosquitto
+ENV DOCKER_IMAGE=aggresss/mosquitto
 
 # configure environment for mosquitto
 RUN apt-get update && apt-get install -y --no-install-recommends \
