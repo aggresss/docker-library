@@ -70,7 +70,7 @@ RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list && \
     chown docker:docker -R /home/docker \
     && \
     echo "#!/bin/bash" > /usr/local/bin/docker-entrypoint.sh && \
-    sed -r -e 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/cron \
+    sed -r -e 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/cron && \
     echo "/etc/init.d/cron start" >> /usr/local/bin/docker-entrypoint.sh && \
     echo "sudo supervisord -c /etc/supervisor/supervisord.conf" >> /usr/local/bin/docker-entrypoint.sh && \
     echo "exec \"\$@\"" >> /usr/local/bin/docker-entrypoint.sh && \
