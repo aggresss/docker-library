@@ -3,7 +3,7 @@
 FROM aggresss/elementary:bionic
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=xxx/bionic VERSION=yyy
+LABEL IMAGE=aggresss/xxx VERSION=www
 
 # configure environment for xxx
 RUN apt-get update && apt-get install -y --no-install-recommends \
