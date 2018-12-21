@@ -39,6 +39,7 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
     apt-get update && apt-get install -y --no-install-recommends \\
         sudo \\
+        cron \\
         man \\
         tzdata \\
         locales \\
@@ -95,6 +96,7 @@ RUN sed -i '${MIRROR}' /etc/apt/sources.list && \\
     chown docker:docker -R /home/docker \\
     && \\
     echo "#!/bin/bash" > /usr/local/bin/docker-entrypoint.sh && \\
+    echo "/etc/init.d/cron start" >> /usr/local/bin/docker-entrypoint.sh && \\
     echo "sudo supervisord -c /etc/supervisor/supervisord.conf" >> /usr/local/bin/docker-entrypoint.sh && \\
     echo "exec \"\\\$@\"" >> /usr/local/bin/docker-entrypoint.sh && \\
     chmod 755 /usr/local/bin/docker-entrypoint.sh
