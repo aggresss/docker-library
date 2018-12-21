@@ -3,7 +3,8 @@
 FROM aggresss/elementary:bionic
 
 MAINTAINER aggresss <aggresss@163.com>
-LABEL IMAGE=aggresss/xxx VERSION=www
+LABEL DOCKER_IMAGE=aggresss/xxx:www
+ENV DOCKER_IMAGE=aggresss/xxx:www
 
 # configure environment for xxx
 RUN apt-get update && apt-get install -y --no-install-recommends \
