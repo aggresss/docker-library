@@ -9,6 +9,7 @@ ENV DOCKER_IMAGE=aggresss/mosquitto
 # configure environment for mosquitto
 RUN apt-get update && apt-get install -y --no-install-recommends \
     mosquitto \
+    mosquitto-clients \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* \
