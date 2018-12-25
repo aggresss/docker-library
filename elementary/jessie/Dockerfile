@@ -38,6 +38,8 @@ RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
         unzip \
         xz-utils \
         p7zip-full \
+        rar \
+        unrar \
         hexedit \
         tmux \
         build-essential \
