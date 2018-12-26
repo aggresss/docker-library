@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         gcc-multilib \
         valgrind \
         ffmpeg \
+        nginx \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
