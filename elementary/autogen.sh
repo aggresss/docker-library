@@ -63,8 +63,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \\
         unzip \\
         xz-utils \\
         p7zip-full \\
-        rar \\
-        unrar \\
         hexedit \\
         tmux \\
         build-essential \\
