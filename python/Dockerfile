@@ -8,7 +8,7 @@ ENV DOCKER_IMAGE=aggresss/python
 
 WORKDIR /root/jupyter-notebook
 
-RUN apt-get update && apt-get -y install python-dev python3-dev && \
+RUN apt-get update && apt-get -y install python-dev python3-dev virtualenv && \
     cd /usr/local/bin && curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
     python get-pip.py && python3 get-pip.py && \
     mkdir -p /root/.pip && \
