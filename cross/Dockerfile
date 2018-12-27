@@ -17,6 +17,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         valgrind \
         ffmpeg \
         nginx \
+        mosquitto \
+        mosquitto-clients \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
