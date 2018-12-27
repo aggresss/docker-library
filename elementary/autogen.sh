@@ -4,14 +4,14 @@
 DIST_DIR=.
 DOCKERFILE=Dockerfile
 ###############################################################################
-# distribution   codename    mirror
+# distribution   codename
 ###############################################################################
 declare -a DISTRIBUTIONS=( \
-    "ubuntu      trusty      s/archive.ubuntu/mirrors.aliyun/g" \
-    "ubuntu      xenial      s/archive.ubuntu/mirrors.aliyun/g" \
-    "ubuntu      bionic      s/archive.ubuntu/mirrors.aliyun/g" \
-    "debian      jessie      s/deb.debian.org/mirrors.aliyun.com/g" \
-    "debian      stretch     s/deb.debian.org/mirrors.aliyun.com/g" \
+    "ubuntu      trusty" \
+    "ubuntu      xenial" \
+    "ubuntu      bionic" \
+    "debian      jessie" \
+    "debian      stretch" \
     )
 
 ################################################################################
@@ -20,8 +20,7 @@ do
     declare -a ARRAY=(${D})
     DISTRIBUTION=${ARRAY[0]}
     CODENAME=${ARRAY[1]}
-    MIRROR=${ARRAY[2]}
-    echo ${DISTRIBUTION} "|" ${CODENAME} "|" ${MIRROR}
+    echo "|" ${DISTRIBUTION} "|" ${CODENAME} "|"
     mkdir -p ${DIST_DIR}/${CODENAME}
     cat << END > ${DIST_DIR}/${CODENAME}/${DOCKERFILE}
 # Dockerfile for ${CODENAME} and auto generate by
@@ -86,8 +85,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \\
         && \\
     apt-get clean && \\
     rm -rf /var/lib/apt/lists/* && \\
-    cp /etc/apt/sources.list /etc/apt/sources.list.origin && \\
-    cp /etc/apt/sources.list /etc/apt/sources.list.aliyun && sed -i '${MIRROR}' /etc/apt/sources.list.aliyun && \\
     \\
     echo "docker:x:1000:1000::/home/docker:/bin/bash" >> /etc/passwd && \\
     echo "docker:x:1000:" >> /etc/group && \\

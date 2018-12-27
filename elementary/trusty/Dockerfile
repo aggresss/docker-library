@@ -60,8 +60,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    cp /etc/apt/sources.list /etc/apt/sources.list.origin && \
-    cp /etc/apt/sources.list /etc/apt/sources.list.aliyun && sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list.aliyun && \
     \
     echo "docker:x:1000:1000::/home/docker:/bin/bash" >> /etc/passwd && \
     echo "docker:x:1000:" >> /etc/group && \
