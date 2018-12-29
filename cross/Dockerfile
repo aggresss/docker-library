@@ -12,8 +12,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         virtualenv \
         unrar \
         software-properties-common \
-        lib32ncurses5-dev \
         gcc-multilib \
+        lib32ncurses5-dev \
+        lib32z1 \
         valgrind \
         ffmpeg \
         nginx \
