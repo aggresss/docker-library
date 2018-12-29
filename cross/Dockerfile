@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python3-dev \
         virtualenv \
         unrar \
-        software-properties-common \
         gcc-multilib \
         lib32ncurses5-dev \
         lib32z1 \
