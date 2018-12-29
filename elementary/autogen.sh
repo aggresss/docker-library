@@ -36,6 +36,7 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 # Pick up some build dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \\
+        software-properties-common \\
         sudo \\
         cron \\
         man \\
@@ -72,6 +73,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \\
         cmake \\
         ccache \\
         python \\
+        python3 \\
         pkg-config \\
         flex \\
         bison \\
