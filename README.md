@@ -9,9 +9,29 @@
 
 ## Recommand Launch Command:
 
+### Linux
+
 ```bash
 docker volume create root
-docker run -it --rm -v root:/root -e DISPLAY=host.docker.internal:0 aggresss/elementary:bionic
+DOCKER_HOST=$(docker network inspect --format='{{range .IPAM.Config}}{{.Gateway}}{{end}}' bridge)
+xhost +local:docker > /dev/null
+docker run --rm -it \
+    --add-host=host.docker.internal:${DOCKER_HOST} \
+    -v /tmp/.X11-unix/:/tmp/.X11-unix \
+    -v root:/root \
+    -e DISPLAY \
+    elementary:bionic
+```
+
+### MacOS and Windows
+
+```bash
+docker volume create root
+xhost +localhost > /dev/null
+docker run --rm -it \
+    -v root:/root \
+    -e DISPLAY=host.docker.internal:0 \
+    elementary:bionic
 ```
 > XQuartz on MacOS and Xming on Windows is recommended.
 

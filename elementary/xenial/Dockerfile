@@ -58,7 +58,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         gawk \
         net-tools \
         iputils-ping \
-        iproute \
         netcat \
         socat \
         && \
