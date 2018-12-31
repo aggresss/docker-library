@@ -14,7 +14,7 @@
 ```bash
 docker volume create root
 DOCKER_HOST=$(docker network inspect --format='{{range .IPAM.Config}}{{.Gateway}}{{end}}' bridge)
-xhost +local:docker > /dev/null
+xhost +local:docker
 docker run --rm -it \
     --add-host=host.docker.internal:${DOCKER_HOST} \
     -v /tmp/.X11-unix/:/tmp/.X11-unix \
@@ -23,17 +23,32 @@ docker run --rm -it \
     elementary:bionic
 ```
 
-### MacOS and Windows
+### MacOS
 
 ```bash
 docker volume create root
-xhost +localhost > /dev/null
+xhost +localhost
 docker run --rm -it \
     -v root:/root \
     -e DISPLAY=host.docker.internal:0 \
     elementary:bionic
 ```
-> XQuartz on MacOS and Xming on Windows is recommended.
+
+> Xming on Windows is recommended.
+
+### Windows
+
+```bash
+docker volume create root
+docker run --rm -it \
+    -v root:/root \
+    -e DISPLAY=host.docker.internal:0 \
+    elementary:bionic
+```
+
+> XQuartz on MacOS is recommended.
+
+---
 
 ## Distribution Declare
 
