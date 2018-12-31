@@ -11,7 +11,7 @@
 
 ```bash
 docker volume create root
-docker run -it --rm -v ~/Downloads:/mnt/Downloads -v root:/root -e DISPLAY=host.docker.internal:0
+docker run -it --rm -v root:/root -e DISPLAY=host.docker.internal:0 aggresss/elementary:bionic
 ```
 > XQuartz on MacOS and Xming on Windows is recommended.
 
