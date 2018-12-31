@@ -7,6 +7,16 @@
 
 ---
 
+## Recommand Launch Command:
+
+```bash
+docker volume create root
+docker run -it --rm -v ~/Downloads:/mnt/Downloads -v root:/root -e DISPLAY=host.docker.internal:0
+```
+> XQuartz on MacOS and Xming on Windows is recommended.
+
+## Distribution Declare
+
 | Distribution | Codename | libc | gcc | bin-utils |
 |:---:|:---:|:---:|:---:|:---:|
 | Debian 8 | Jessie | GLIBC 2.19 | 4.9.2 | 2.25 |
