@@ -1,7 +1,5 @@
 # docker-library
 
-[![](https://img.shields.io/docker/automated/aggresss/elementary.svg)](https://hub.docker.com/r/aggresss/elementary/)
-[![](https://img.shields.io/docker/build/aggresss/elementary.svg)](https://hub.docker.com/r/aggresss/elementary/)
 [![](https://img.shields.io/docker/pulls/aggresss/elementary.svg)](https://hub.docker.com/r/aggresss/elementary/)
 [![](https://img.shields.io/docker/stars/aggresss/elementary.svg)](https://hub.docker.com/r/aggresss/elementary/)
 
@@ -47,6 +45,8 @@ docker run --rm -it \
 ```
 
 > XQuartz on MacOS is recommended.
+
+> - [x] XQuartz Preference -> Security -> Allow connections from network clients
 
 ---
 
