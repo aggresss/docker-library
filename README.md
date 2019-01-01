@@ -46,7 +46,7 @@ docker run --rm -it \
 
 > XQuartz on MacOS is recommended.
 
-> - [x] XQuartz Preference -> Security -> Allow connections from network clients
+> [x] XQuartz Preferences -> Security -> Allow connections from network clients
 
 ---
 
