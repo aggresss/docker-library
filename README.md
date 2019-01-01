@@ -32,7 +32,9 @@ docker run --rm -it \
     elementary:bionic
 ```
 
-> Xming on Windows is recommended.
+> XQuartz on MacOS is recommended.
+
+> - [x] XQuartz Preferences -> Security -> Allow connections from network clients
 
 ### Windows
 
@@ -44,9 +46,7 @@ docker run --rm -it \
     elementary:bionic
 ```
 
-> XQuartz on MacOS is recommended.
-
-> [x] XQuartz Preferences -> Security -> Allow connections from network clients
+> Xming on Windows is recommended.
 
 ---
 
