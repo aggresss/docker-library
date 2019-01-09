@@ -97,6 +97,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \\
     mkdir -p /home/docker && \\
     chown docker:docker -R /home/docker \\
     && \\
+    wget -P /usr/local/bin https://github.com/aggresss/dotfiles/raw/master/update_dotfiles.sh && \\
+    chmod 755 /usr/local/bin/update_dotfiles.sh \\
+    && \\
     echo "#!/bin/bash" > /usr/local/bin/docker-entrypoint.sh && \\
     sed -r -e 's@session\\s*required\\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/cron && \\
     echo "/etc/init.d/cron start" >> /usr/local/bin/docker-entrypoint.sh && \\
