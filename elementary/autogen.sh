@@ -72,6 +72,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \\
         automake \\
         libtool \\
         cmake \\
+        cmake-curses-gui \\
         ccache \\
         python \\
         python3 \\
