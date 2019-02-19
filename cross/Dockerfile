@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         gcc-multilib \
         lib32ncurses5-dev \
         lib32z1 \
+        doxygen \
         valgrind \
         ffmpeg \
         nginx \
