@@ -38,6 +38,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         jq \
         cpio \
         unzip \
+        zip \
         xz-utils \
         p7zip-full \
         hexedit \
