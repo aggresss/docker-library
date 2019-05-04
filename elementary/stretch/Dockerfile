@@ -41,6 +41,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         zip \
         xz-utils \
         p7zip-full \
+        gnupg \
         hexedit \
         tmux \
         build-essential \
