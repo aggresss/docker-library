@@ -28,4 +28,3 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     cd /usr/local/bin && curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
     python3 get-pip.py && python get-pip.py
 
-WORKDIR /root
