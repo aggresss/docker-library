@@ -68,6 +68,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \\
         p7zip-full \\
         gnupg \\
         hexedit \\
+        chrpath \\
+        diffstat \\
         tmux \\
         build-essential \\
         pstack \\
