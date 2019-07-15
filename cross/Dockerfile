@@ -7,15 +7,15 @@ LABEL DOCKER_IMAGE=aggresss/cross
 ENV DOCKER_IMAGE=aggresss/cross
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        python-dev \
-        python3-dev \
-        virtualenv \
-        unrar \
         gcc-multilib \
         lib32ncurses5-dev \
         lib32z1 \
         doxygen \
         valgrind \
+        unrar \
+        python-dev \
+        python3-dev \
+        virtualenv \
         ffmpeg \
         nginx \
         mosquitto \
