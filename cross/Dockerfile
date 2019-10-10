@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python-dev \
         python3-dev \
         virtualenv \
+        nodejs \
         ffmpeg \
         nginx \
         mosquitto \
