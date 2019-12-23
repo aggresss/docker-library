@@ -6,10 +6,12 @@ MAINTAINER aggresss <aggresss@163.com>
 LABEL DOCKER_IMAGE=aggresss/cross
 ENV DOCKER_IMAGE=aggresss/cross
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN dpkg --add-architecture i386 && \
+    apt-get update && apt-get install -y --no-install-recommends \
         gcc-multilib \
         lib32ncurses5-dev \
         lib32z1 \
+        libexpat1-dev:i386 \
         doxygen \
         valgrind \
         unrar \
