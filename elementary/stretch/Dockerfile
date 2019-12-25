@@ -52,6 +52,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         gdbserver \
         automake \
         libtool \
+        gettext \
+        autopoint \
         cmake \
         cmake-curses-gui \
         ccache \
