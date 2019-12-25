@@ -52,6 +52,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         gdbserver \
         automake \
         libtool \
+        libtool-bin \
         cmake \
         cmake-curses-gui \
         ccache \
