@@ -35,7 +35,7 @@ ENV TZ=Asia/Shanghai
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 # Pick up some build dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \\
+RUN apt-get update && apt-get install -m -y --no-install-recommends \\
         software-properties-common \\
         sudo \\
         cron \\
