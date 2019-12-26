@@ -25,6 +25,7 @@ RUN dpkg --add-architecture i386 && \
         mosquitto \
         mosquitto-clients \
         gyp \
+        libtool-bin \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
