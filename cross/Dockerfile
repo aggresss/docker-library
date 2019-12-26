@@ -27,6 +27,7 @@ RUN dpkg --add-architecture i386 && \
         gyp \
         libtool-bin \
         && \
+    apt-get install gcc-aarch64-linux-gnu && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     \
