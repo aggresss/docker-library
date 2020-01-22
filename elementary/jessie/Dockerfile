@@ -2,7 +2,7 @@
 # https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
 FROM debian:jessie
 
-MAINTAINER aggresss <aggresss@163.com>
+LABEL maintainer="aggresss@163.com"
 LABEL DOCKER_IMAGE=aggresss/elementary:jessie
 ENV DOCKER_IMAGE=aggresss/elementary:jessie
 ENV DEBIAN_FRONTEND=noninteractive

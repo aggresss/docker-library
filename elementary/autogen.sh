@@ -27,7 +27,7 @@ do
 # https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
 FROM ${DISTRIBUTION}:${CODENAME}
 
-MAINTAINER aggresss <aggresss@163.com>
+LABEL maintainer="aggresss@163.com"
 LABEL DOCKER_IMAGE=aggresss/elementary:${CODENAME}
 ENV DOCKER_IMAGE=aggresss/elementary:${CODENAME}
 ENV DEBIAN_FRONTEND=noninteractive

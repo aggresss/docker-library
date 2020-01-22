@@ -2,7 +2,7 @@
 # https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
 FROM debian:stretch
 
-MAINTAINER aggresss <aggresss@163.com>
+LABEL maintainer="aggresss@163.com"
 LABEL DOCKER_IMAGE=aggresss/elementary:stretch
 ENV DOCKER_IMAGE=aggresss/elementary:stretch
 ENV DEBIAN_FRONTEND=noninteractive

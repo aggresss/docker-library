@@ -2,7 +2,7 @@
 # https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
 FROM ubuntu:bionic
 
-MAINTAINER aggresss <aggresss@163.com>
+LABEL maintainer="aggresss@163.com"
 LABEL DOCKER_IMAGE=aggresss/elementary:bionic
 ENV DOCKER_IMAGE=aggresss/elementary:bionic
 ENV DEBIAN_FRONTEND=noninteractive
