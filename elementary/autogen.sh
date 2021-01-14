@@ -10,6 +10,7 @@ declare -a DISTRIBUTIONS=( \
     "ubuntu      trusty" \
     "ubuntu      xenial" \
     "ubuntu      bionic" \
+    "ubuntu      focal" \
     "debian      jessie" \
     "debian      stretch" \
     )
