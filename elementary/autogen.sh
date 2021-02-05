@@ -1,6 +1,9 @@
 #!/bin/bash
 # Auto generate Dockerfile for aggresss/elementary
 
+# Emulate ksh array
+{ setopt KSH_ARRAYS || : ; } 2> /dev/null
+
 DIST_DIR=.
 DOCKERFILE=Dockerfile
 ###############################################################################
