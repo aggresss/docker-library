@@ -32,7 +32,7 @@ RUN dpkg --add-architecture i386 && \
     rm -rf /var/lib/apt/lists/* && \
     \
     cd /usr/local/bin && curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-    python3 get-pip.py && python get-pip.py
+    python3 get-pip.py
 
 CMD ["bash"]
 
