@@ -1,6 +1,6 @@
 # Dockerfile for cross-compile environment
 
-FROM aggresss/elementary:bionic
+FROM aggresss/elementary:focal
 
 MAINTAINER aggresss <aggresss@163.com>
 LABEL DOCKER_IMAGE=aggresss/cross
