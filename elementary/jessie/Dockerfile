@@ -1,5 +1,5 @@
 # Dockerfile for jessie and auto generate by
-# https://github.com/aggresss/docker-library/blob/master/elementary/autogen.sh
+# https://github.com/aggresss/docker-library/blob/elementary/elementary/autogen.sh
 FROM debian:jessie
 
 LABEL maintainer="aggresss@163.com"
@@ -85,7 +85,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     mkdir -p /home/docker && \
     chown docker:docker -R /home/docker \
     && \
-    wget -P /usr/local/bin https://github.com/aggresss/dotfiles/raw/master/bin/update_dotfiles.sh && \
+    wget -P /usr/local/bin https://github.com/aggresss/dotfiles/raw/main/bin/update_dotfiles.sh && \
     chmod 755 /usr/local/bin/update_dotfiles.sh \
     && \
     echo "#!/bin/bash" > /usr/local/bin/docker-entrypoint.sh && \
