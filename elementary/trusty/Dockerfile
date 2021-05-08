@@ -79,6 +79,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/* && \
     \
     echo "docker:x:1000:1000::/home/docker:/bin/bash" >> /etc/passwd && \
+    echo "docker:*:10000:0:99999:7:::" >> /etc/shadow && \
     echo "docker:x:1000:" >> /etc/group && \
     echo "docker ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/docker && \
     chmod 0440 /etc/sudoers.d/docker && \
