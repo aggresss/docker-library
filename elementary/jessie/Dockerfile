@@ -58,7 +58,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         cmake \
         cmake-curses-gui \
         ccache \
-        python \
         python3 \
         pkg-config \
         flex \
@@ -74,7 +73,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         tcpdump \
         x11-apps \
         && \
-    (apt-get -y --no-install-recommends libtool-bin || echo) && \
+    (apt-get install -y --no-install-recommends libtool-bin || echo) && \
+    (apt-get install -y --no-install-recommends python || echo) && (apt-get install -y --no-install-recommends python2 || echo) && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     \

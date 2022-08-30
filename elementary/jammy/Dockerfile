@@ -1,10 +1,10 @@
-# Dockerfile for xenial and auto generate by
+# Dockerfile for jammy and auto generate by
 # https://github.com/aggresss/docker-library/blob/elementary/elementary/autogen.sh
-FROM ubuntu:xenial
+FROM ubuntu:jammy
 
 LABEL maintainer="aggresss@163.com"
-LABEL DOCKER_IMAGE=aggresss/elementary:xenial
-ENV DOCKER_IMAGE=aggresss/elementary:xenial
+LABEL DOCKER_IMAGE=aggresss/elementary:jammy
+ENV DOCKER_IMAGE=aggresss/elementary:jammy
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Shanghai
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
