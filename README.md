@@ -52,12 +52,12 @@ docker run --rm -it \
 
 ## Distribution Declare
 
-| Distribution | Codename | libc | gcc | binutils |
-|:---:|:---:|:---:|:---:|:---:|
-| Debian 8 | Jessie | GLIBC 2.19 | 4.9.2 | 2.25 |
-| Debian 9 | Stretch | GLIBC 2.24 | 6.3.0 | 2.28 |
-| Ubuntu 14.04 | Trusty | EGLIBC 2.19 | 4.8.0 | 2.24 |
-| Ubuntu 16.04 | Xenial | GLIBC 2.23 | 5.4.0 | 2.26 |
-| Ubuntu 18.04 | Bionic | GLIBC 2.27 | 7.5.0 | 2.30 |
-| Ubuntu 20.04 | Focal | GLIBC 2.31 | 9.3.0 | 2.34 |
-| Ubuntu 22.04 | Jammy | GLIBC 2.35 | 11.2.0 | 2.38 |
+| Distribution | Codename | Kernel | libc | gcc | binutils |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| Debian 8 | Jessie | 3.16 | GLIBC 2.19 | 4.9.2 | 2.25 |
+| Debian 9 | Stretch | 4.9 | GLIBC 2.24 | 6.3.0 | 2.28 |
+| Ubuntu 14.04 | Trusty | 4.4 | EGLIBC 2.19 | 4.8.0 | 2.24 |
+| Ubuntu 16.04 | Xenial | 4.4 | GLIBC 2.23 | 5.4.0 | 2.26 |
+| Ubuntu 18.04 | Bionic | 5.0 | GLIBC 2.27 | 7.5.0 | 2.30 |
+| Ubuntu 20.04 | Focal | 5.4 | GLIBC 2.31 | 9.3.0 | 2.34 |
+| Ubuntu 22.04 | Jammy | 5.17 | GLIBC 2.35 | 11.2.0 | 2.38 |
