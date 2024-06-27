@@ -12,7 +12,6 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 # Pick up some build dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
         software-properties-common \
-        libncurses5 \
         sudo \
         cron \
         xclip \
@@ -68,13 +67,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         net-tools \
         iputils-ping \
         dnsutils \
-        netcat \
         socat \
         tcpdump \
         x11-apps \
         && \
+    (apt-get install -y --no-install-recommends python || echo) && \
+    (apt-get install -y --no-install-recommends python2 || echo) && \
     (apt-get install -y --no-install-recommends libtool-bin || echo) && \
-    (apt-get install -y --no-install-recommends python || echo) && (apt-get install -y --no-install-recommends python2 || echo) && \
+    (apt-get install -y --no-install-recommends netcat || echo) && \
+    (apt-get install -y --no-install-recommends libncurses5 || echo) && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     \

@@ -1,10 +1,10 @@
-# Dockerfile for jessie and auto generate by
+# Dockerfile for noble and auto generate by
 # https://github.com/aggresss/docker-library/blob/elementary/elementary/autogen.sh
-FROM debian:jessie
+FROM ubuntu:noble
 
 LABEL maintainer="aggresss@163.com"
-LABEL DOCKER_IMAGE=aggresss/elementary:jessie
-ENV DOCKER_IMAGE=aggresss/elementary:jessie
+LABEL DOCKER_IMAGE=aggresss/elementary:noble
+ENV DOCKER_IMAGE=aggresss/elementary:noble
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Shanghai
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
