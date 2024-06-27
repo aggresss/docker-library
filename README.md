@@ -59,6 +59,7 @@ docker run --rm -it \
 | Ubuntu 18.04 | Bionic | 5.0  | GLIBC 2.27  | 7.5.0  | 2.30 |
 | Ubuntu 20.04 | Focal  | 5.4  | GLIBC 2.31  | 9.3.0  | 2.34 |
 | Ubuntu 22.04 | Jammy  | 5.17 | GLIBC 2.35  | 11.2.0 | 2.38 |
+| Ubuntu 24.04 | Noble  | 6.8  | GLIBC 2.39  | 13.2.0 | 2.42 |
 
 
 | Distribution | Codename | Kernel | libc | gcc | binutils |
